@@ -1,0 +1,233 @@
+<div *ngIf="this.socarEvrak != undefined" class="container2">
+    <div class="left">
+        <ng-container *ngIf="this.socarEvrak?.foto == null">
+            <img src="./assets/media/logos/socar1.jpg" alt="Profil Resmi" class="profile-picture grid-item-img">
+        </ng-container>
+
+        <ng-container *ngIf="this.socarEvrak?.foto != null">
+            <img src="{{'data:image/jpg;base64,' + this.socarEvrak?.foto}}" alt="Profil Resmi" class="profile-picture grid-item-img">
+        </ng-container>
+        <div  class="info">
+            <div class="sicil">
+                <label>{{this.socarEvrak?.ad}}&nbsp;&nbsp;{{this.socarEvrak?.soyad}}</label>
+            </div>
+            <div class="sicil">
+                <label>{{this.socarEvrak?.sicilno}}</label>
+            </div>
+            <div class="sicil">
+                <label>{{this.socarEvrak?.firma}}</label>
+            </div>
+            <div class="sicil">
+                <label>{{this.socarEvrak?.altfirma}}</label>
+            </div>
+            <div class="sicil">
+                <label>{{this.socarEvrak?.pozisyon}}</label>
+            </div>
+            <!-- <div class="sicil">
+                <label>ÖZLEM&nbsp;&nbsp;ÇİÇEKÇİ</label>
+            </div>
+            <div class="sicil">
+                <label>456789123</label>
+            </div>
+            <div class="sicil">
+                <label>SOCAR TÜRKİYE AŞ.</label>
+            </div>
+            <div class="sicil">
+                <label>MEYER GROUP</label>
+            </div>
+            <div class="sicil">
+                <label>YAZILIM DESTEK UZMANI</label>
+            </div> -->
+        </div>
+    </div>
+    <div class="right">
+                <img src="./assets/media/logos/socar2.png" alt="Profil Resmi" class="logo">
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title">MESLEKİ YETERLİLİK BELGE TARİHİ:<p>{{this.socarEvrak?.meslekyeterlilik}}</p></label>
+                    </div>
+                </div>
+
+                <div class="grid-item2">
+                    <div class="col-12 mb-4">
+                        <label class="title">KALAN GÜN:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.meslekyeterlilik)}}</p> 
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title">İŞ BİTİM TARİHİ:<p>{{this.socarEvrak?.isbitim}}</p></label>
+             
+                    </div>
+                </div>
+
+                <div class="grid-item2">
+                    <div class="col-12 mb-4">
+                        <label class="title">KALAN GÜN:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.isbitim)}}</p>  
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title">ADLİ SİCİL KAYDI TARİHİ:<p>{{this.socarEvrak?.adlisicil}}</p></label>
+                    </div>
+                </div>
+
+                <div class="grid-item2">
+                    <div class="col-12 mb-4">
+                        <label class="title">KALAN GÜN:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.adlisicil)}}</p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title">SAĞLIK RAPORU TARİHİ:<p>{{this.socarEvrak?.saglikraporu}}</p></label>
+                    </div>
+                </div>
+
+                <div class="grid-item2">
+                    <div class="col-12 mb-4">
+                        <label class="title">KALAN GÜN:</label> 
+                        <p>{{this.kalanSure(this.socarEvrak?.saglikraporu)}}</p> 
+                    </div>
+                </div>
+           
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title">SOCAR EĞİTİM PASAPORTU TARİHİ:</label>  
+                        <p>{{this.socarEvrak?.socaregitimpasaportu}}</p>
+                    </div>
+                </div>
+
+               <div class="grid-item2">
+                    <div class="col-12 mb-4">
+                        <label class="title">KALAN GÜN:</label> 
+                        <p>{{this.kalanSure(this.socarEvrak?.socaregitimpasaportu)}}</p>  
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title">TEMEL İŞ SAĞLIĞI VE GÜVENLİĞİ EĞİTİMİ TARİHİ:</label> 
+                        <p>{{this.socarEvrak?.temelissagligi}}</p>
+                    </div>
+
+                </div>
+
+                <div class="grid-item2">
+                    <div class="col-12 mb-4">
+                        <label class="title">KALAN GÜN:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.temelissagligi)}}</p>  
+                    </div>
+                </div>
+    </div>
+</div>
+
+<div *ngIf="this.socarEvrak == undefined" class="container2">
+    <img  src="./assets/media/logos/socar4.png" alt="Profil Resmi" style="height: 95vh !important;width: 95vw !important;object-fit: contain;">
+</div>
+
+
+<!-- <div class="container2">
+    <div class="left">
+        <ng-container *ngIf="this.socarEvrak?.foto == null">
+            <img src="./assets/media/logos/socar1.jpg" alt="Profil Resmi" class="profile-picture grid-item-img">
+        </ng-container>
+
+        <ng-container *ngIf="this.socarEvrak?.foto != null">
+            <img src="{{'data:image/jpg;base64,' + this.socarEvrak?.foto}}" alt="Profil Resmi" class="profile-picture grid-item-img">
+        </ng-container>
+        <div class="info">
+            <p>{{this.socarEvrak?.ad}}&nbsp; &nbsp; {{this.socarEvrak?.soyad}}</p>
+            <p>{{this.socarEvrak?.sicilno}}</p>
+            <p>{{this.socarEvrak?.firma}}</p>
+            <p>{{this.socarEvrak?.altfirma}}</p>
+            <p>{{this.socarEvrak?.pozisyon}}</p>
+        </div>
+    </div>
+    <div class="right">
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Mesleki Yeterlilik Belge Tarihi:<p>{{this.socarEvrak?.meslekyeterlilik}}</p></label>
+                    </div>
+                </div>
+
+                <div class="grid-item" [ngStyle]="{backgroundColor: (false ? '#78b94f' : '#df242e')}">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Kalan Gün:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.meslekyeterlilik)}}</p> 
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">İş Bitim Tarihi:<p>{{this.socarEvrak?.isbitim}}</p></label>
+                    </div>
+                </div>
+
+                <div class="grid-item" [ngStyle]="{backgroundColor: (true ? '#78b94f' : '#df242e')}">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Kalan Gün:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.isbitim)}}</p>  
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Adli Sicil Kaydı Tarihi:<p>{{this.socarEvrak?.adlisicil}}</p></label>
+                    </div>
+                </div>
+
+                <div class="grid-item" [ngStyle]="{backgroundColor: (false ? '#78b94f' : '#df242e')}">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Kalan Gün:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.adlisicil)}}</p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="evrak" for="inputMeal">Sağlık Raporu Tarihi:<p>{{this.socarEvrak?.saglikraporu}}</p></label>
+                    </div>
+                </div>
+
+                <div class="grid-item" [ngStyle]="{backgroundColor: (true ? '#78b94f' : '#df242e')}">
+                    <div class="col-12 mb-4">
+                        <label class="evrak" for="inputMeal">Kalan Gün:</label> 
+                        <p>{{this.kalanSure(this.socarEvrak?.saglikraporu)}}</p> 
+                    </div>
+                </div>
+           
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">SOCAR Eğitim Pasaportu Tarihi:</label>  
+                        <p>{{this.socarEvrak?.socaregitimpasaportu}}</p>
+                    </div>
+                </div>
+
+               <div class="grid-item" [ngStyle]="{backgroundColor: (false ? '#78b94f' : '#df242e')}">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Kalan Gün:</label> 
+                        <p>{{this.kalanSure(this.socarEvrak?.socaregitimpasaportu)}}</p>  
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Temel İş Sağlığı ve Güvenliği Eğitimi Tarihi:</label> 
+                        <p>{{this.socarEvrak?.temelissagligi}}</p>
+                    </div>
+
+                </div>
+
+                <div class="grid-item" [ngStyle]="{backgroundColor: (true ? '#78b94f' : '#df242e')}">
+                    <div class="col-12 mb-4">
+                        <label class="title" for="inputMeal">Kalan Gün:</label>
+                        <p>{{this.kalanSure(this.socarEvrak?.temelissagligi)}}</p>  
+                    </div>
+                </div>
+    </div>
+</div> -->

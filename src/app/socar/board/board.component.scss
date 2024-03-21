@@ -1,0 +1,116 @@
+/* Temel sayfa stilini ayarlayın */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Ana konteyneri (container) oluşturun ve CSS Grid'i etkinleştirin */
+.container2 {
+    display: grid;
+    grid-template-columns: 30% 70%; /* İki sütun oluşturun, %30 ve %70 genişliklerinde */
+    grid-gap: 5px; /* Sütunlar arasındaki boşluk (isteğe bağlı) */
+    height: 100vh;
+
+}
+
+/* Sol tarafı stilize edin */
+.left {
+    background-color: #fff; /* Arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 10px; /* İçerikten içeri boşluk */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img {
+    max-width: 100%;
+    height: 30vh;
+    background-color: #ffffff;
+}
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.right {
+    color: #fff; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px;
+    grid-template-columns: 70% 30%;
+    background-color: #fff;
+    position: relative;
+}
+
+.grid-item {
+    position: relative;
+    z-index: 2;
+    background-color:  rgb(223, 36, 46, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: x-large;
+}
+.grid-item2 {
+    position: relative;
+    z-index: 2;
+    background-color: rgb(46, 153, 211, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: x-large;
+}
+.sicil{
+    background-color: rgb(120, 185, 79, 0.5);
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.info{
+    color: rgb(7, 37, 17);
+    font-size: x-large;
+    font-weight: bold;
+}
+.title{
+    font-weight: bold;
+    align-items: center;
+    padding: 5px;
+}
+// .grid-item-img {
+//     color: #fff;
+//     text-align: center;
+// }
+
+.right .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Arkayı tamamen kaplaması için */
+    height: 100%; /* Arkayı tamamen kaplaması için */
+    z-index: 1; /* Logo, grid-item içeriğinin üzerinde olacak şekilde ayarlandı */
+}
+@media screen and (max-width: 960px) {
+    .container2 {
+        grid-template-columns: 100%; 
+    }
+
+    .left, .right {
+        padding: 10px;
+    }
+
+    .left img {
+        height: auto; 
+    }
+
+    .right {
+        grid-template-columns: 100%; 
+    }
+
+}
