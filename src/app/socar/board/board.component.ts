@@ -22,7 +22,7 @@ export class BoardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log("userLoginModel",this.helper.userLoginModel);
+    // console.log("userLoginModel",this.helper.userLoginModel);
     this.interval = setInterval(() => {
       this.getData();
     }, 5000);
@@ -60,7 +60,7 @@ export class BoardComponent implements OnInit {
     this.unsubscribe.push(this.socar.getData(this.helper.userLoginModel.tokenid)
     .subscribe((data)=>{
       this.socarEvrak = data[0];
-      console.log("SOCAR KART OKUTMA",this.socarEvrak);
+      // console.log("SOCAR KART OKUTMA",this.socarEvrak);
       this.ref.detectChanges();
     }))
   }

@@ -23,104 +23,88 @@
             <div class="sicil">
                 <label>{{this.socarEvrak?.pozisyon}}</label>
             </div>
-            <!-- <div class="sicil">
-                <label>ÖZLEM&nbsp;&nbsp;ÇİÇEKÇİ</label>
-            </div>
-            <div class="sicil">
-                <label>456789123</label>
-            </div>
-            <div class="sicil">
-                <label>SOCAR TÜRKİYE AŞ.</label>
-            </div>
-            <div class="sicil">
-                <label>MEYER GROUP</label>
-            </div>
-            <div class="sicil">
-                <label>YAZILIM DESTEK UZMANI</label>
-            </div> -->
         </div>
     </div>
     <div class="right">
                 <img src="./assets/media/logos/socar2.png" alt="Profil Resmi" class="logo">
                 <div class="grid-item">
                     <div class="col-12 mb-4">
-                        <label class="title">MESLEKİ YETERLİLİK BELGE TARİHİ:<p>{{this.socarEvrak?.meslekyeterlilik}}</p></label>
+                        <label class="title">MESLEKİ YETERLİLİK BELGE TARİHİ :<p class="bold">{{this.socarEvrak?.meslekyeterlilik}}</p></label>
                     </div>
                 </div>
 
                 <div class="grid-item2">
                     <div class="col-12 mb-4">
-                        <label class="title">KALAN GÜN:</label>
-                        <p>{{this.kalanSure(this.socarEvrak?.meslekyeterlilik)}}</p> 
+                        <label class="title">KALAN GÜN :</label>
+                        <p class="bold">{{this.kalanSure(this.socarEvrak?.meslekyeterlilik)}}</p>
                     </div>
                 </div>
 
                 <div class="grid-item">
                     <div class="col-12 mb-4">
-                        <label class="title">İŞ BİTİM TARİHİ:<p>{{this.socarEvrak?.isbitim}}</p></label>
-             
+                        <label class="title">İŞ BİTİM TARİHİ :<p class="bold">{{this.socarEvrak?.isbitim}}</p></label>
                     </div>
                 </div>
 
                 <div class="grid-item2">
                     <div class="col-12 mb-4">
-                        <label class="title">KALAN GÜN:</label>
-                        <p>{{this.kalanSure(this.socarEvrak?.isbitim)}}</p>  
+                        <label class="title">KALAN GÜN :</label>
+                        <p class="bold">{{this.kalanSure(this.socarEvrak?.isbitim)}}</p> 
                     </div>
                 </div>
 
                 <div class="grid-item">
                     <div class="col-12 mb-4">
-                        <label class="title">ADLİ SİCİL KAYDI TARİHİ:<p>{{this.socarEvrak?.adlisicil}}</p></label>
+                        <label class="title">ADLİ SİCİL KAYDI TARİHİ :<p class="bold">{{this.socarEvrak?.adlisicil}}</p></label>
                     </div>
                 </div>
 
                 <div class="grid-item2">
                     <div class="col-12 mb-4">
-                        <label class="title">KALAN GÜN:</label>
-                        <p>{{this.kalanSure(this.socarEvrak?.adlisicil)}}</p>
+                        <label class="title">KALAN GÜN :</label>
+                        <p class="bold">{{this.kalanSure(this.socarEvrak?.adlisicil)}}</p>
                     </div>
                 </div>
 
                 <div class="grid-item">
                     <div class="col-12 mb-4">
-                        <label class="title">SAĞLIK RAPORU TARİHİ:<p>{{this.socarEvrak?.saglikraporu}}</p></label>
+                        <label class="title">SAĞLIK RAPORU TARİHİ :<p class="bold">{{this.socarEvrak?.saglikraporu}}</p></label>
                     </div>
                 </div>
 
                 <div class="grid-item2">
                     <div class="col-12 mb-4">
-                        <label class="title">KALAN GÜN:</label> 
-                        <p>{{this.kalanSure(this.socarEvrak?.saglikraporu)}}</p> 
+                        <label class="title">KALAN GÜN :</label> 
+                        <p class="bold">{{this.kalanSure(this.socarEvrak?.saglikraporu)}}</p> 
                     </div>
                 </div>
            
                 <div class="grid-item">
                     <div class="col-12 mb-4">
-                        <label class="title">SOCAR EĞİTİM PASAPORTU TARİHİ:</label>  
-                        <p>{{this.socarEvrak?.socaregitimpasaportu}}</p>
+                        <label class="title">SOCAR EĞİTİM PASAPORTU TARİHİ :</label>  
+                        <p class="bold">{{this.socarEvrak?.socaregitimpasaportu}}</p> 
                     </div>
                 </div>
 
                <div class="grid-item2">
                     <div class="col-12 mb-4">
-                        <label class="title">KALAN GÜN:</label> 
-                        <p>{{this.kalanSure(this.socarEvrak?.socaregitimpasaportu)}}</p>  
+                        <label class="title">KALAN GÜN :</label> 
+                        <p class="bold">{{this.kalanSure(this.socarEvrak?.socaregitimpasaportu)}}</p>
                     </div>
                 </div>
 
                 <div class="grid-item">
                     <div class="col-12 mb-4">
-                        <label class="title">TEMEL İŞ SAĞLIĞI VE GÜVENLİĞİ EĞİTİMİ TARİHİ:</label> 
-                        <p>{{this.socarEvrak?.temelissagligi}}</p>
+                        <label class="title">TEMEL İŞ SAĞLIĞI VE GÜVENLİĞİ EĞİTİMİ TARİHİ :</label> 
+                        <p class="bold">{{this.socarEvrak?.temelissagligi}}</p>
                     </div>
 
                 </div>
 
                 <div class="grid-item2">
                     <div class="col-12 mb-4">
-                        <label class="title">KALAN GÜN:</label>
-                        <p>{{this.kalanSure(this.socarEvrak?.temelissagligi)}}</p>  
+                        <label class="title">KALAN GÜN :</label>
+                        <p class="bold">{{this.kalanSure(this.socarEvrak?.temelissagligi)}}</p>
                     </div>
                 </div>
     </div>
